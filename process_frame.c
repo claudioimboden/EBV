@@ -78,9 +78,8 @@ void ChangeDetection() {
 			int32 dx = -(int32) *(p - nc - 1) + (int32) *(p - nc + 1)
 					- 2 * (int32) *(p - 1) + 2 * (int32) *(p + 1)
 					- (int32) *(p + nc - 1) + (int32) *(p + nc + 1);
-			int32 dy = -(int32) *(p - nc - 1) - 2 * (int32) *(p - nc)
-					- (int32) *(p - nc + 1) + (int32) *(p + nc - 1)
-					+ 2 * (int32) *(p + nc) + (int32) *(p + nc + 1);
+			int32 dy = -(int32) *(p - nc - 1) - 2 * (int32) *(p - nc) - (int32) *(p - nc + 1)
+					+ (int32) *(p + nc - 1) + 2 * (int32) *(p + nc) + (int32) *(p + nc + 1);
 			/* check if norm is larger than threshold */
 			int32 df2 = dx * dx + dy * dy;
 			int32 thr2 = data.ipc.state.nThreshold * data.ipc.state.nThreshold;
