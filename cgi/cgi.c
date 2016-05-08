@@ -308,7 +308,7 @@ static OSC_ERR QueryApp()
 
 			F = fopen(IMG_FN, "wb");
 			//gdImageGif(im_out, F);
-			gdImageJpeg(im_out, F, 10);
+			gdImageJpeg(im_out, F, 25);
 			fclose(F);
 			gdImageDestroy(im_out);
 
