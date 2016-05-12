@@ -164,7 +164,7 @@ void BinningAngle() {
 	uint16 c, o;
 	float interval[] = { 0, 22.5, 67.5, 112.5, 157.5, 180 };
 	uint16 bin[] = { 0, 0, 0, 0 };
-	char* binDesc[4] = {"90", "135", "0", "45"};
+	char* binDesc[4] = {"0", "45", "90", "135"};
 	int i=0;
 	//loop over objects
 	for (o = 0; o < ImgRegions.noOfObjects; o++) {
@@ -202,16 +202,9 @@ void BinningAngle() {
 							bin[0] += 1;
 						}
 					}
-					//data.u8TempImage[SENSORIMG][r * nc + c]=0;
-
-//				printf("%f\n", angle);
 				}
 				currentRun = currentRun->next; //get net run of current object
 			} while (currentRun != NULL); //end of current object
-//		printf("bin0%d\n", bin[0]);
-//		printf("bin1%d\n", bin[1]);
-//		printf("bin2%d\n", bin[2]);
-//		printf("bin3%d\n", bin[3]);
 
 			int max = 0;
 			int maxIndex = 0;
